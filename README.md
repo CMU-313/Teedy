@@ -60,10 +60,42 @@ A demo is available at [demo.teedy.io](https://demo.teedy.io)
 Before building Teedy from source, you will need to install several prerequisites, including Java 11+, Maven 3+, NPM, Grunt, Tesseract 4, ffmpeg, and mediainfo.
 We give instructions for installing these prerequisites on several platforms below.
 
-### Linux (Ubuntu/Debian)
+### Linux (Ubuntu 22.04)
 
 ```console
-
+sudo apt install \
+  default-jdk \
+  ffmpeg \
+  grunt \
+  maven \
+  npm \
+  tesseract-ocr \
+  tesseract-ocr-ara \
+  tesseract-ocr-ces \
+  tesseract-ocr-chi-sim \
+  tesseract-ocr-chi-tra \
+  tesseract-ocr-dan \
+  tesseract-ocr-deu \
+  tesseract-ocr-fin \
+  tesseract-ocr-fra \
+  tesseract-ocr-heb \
+  tesseract-ocr-hin \
+  tesseract-ocr-hun \
+  tesseract-ocr-ita \
+  tesseract-ocr-jpn \
+  tesseract-ocr-kor \
+  tesseract-ocr-lav \
+  tesseract-ocr-nld \
+  tesseract-ocr-nor \
+  tesseract-ocr-pol \
+  tesseract-ocr-por \
+  tesseract-ocr-rus \
+  tesseract-ocr-spa \
+  tesseract-ocr-swe \
+  tesseract-ocr-tha \
+  tesseract-ocr-tur \
+  tesseract-ocr-ukr \
+  tesseract-ocr-vie
 ```
 
 ### Mac

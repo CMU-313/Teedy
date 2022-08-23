@@ -57,14 +57,30 @@ A demo is available at [demo.teedy.io](https://demo.teedy.io)
 
 ## Requirements
 
-- Java 11+ (JDK 11+)
-- Maven 3+
-- NPM
-- Grunt
-- Tesseract 4 for OCR
-- ffmpeg for video thumbnails
-- mediainfo for video metadata extraction
-- A webapp server like [Jetty](http://eclipse.org/jetty) or [Tomcat](http://tomcat.apache.org)
+Before building Teedy from source, you will need to install several prerequisites, including Java 11+, Maven 3+, NPM, Grunt, Tesseract 4, ffmpeg, and mediainfo.
+We give instructions for installing these prerequisites on several platforms below.
+
+### Linux (Ubuntu/Debian)
+
+```console
+
+```
+
+### Mac
+
+```console
+brew install \
+  ffmpeg \
+  grunt-cli \
+  maven \
+  mediainfo \
+  npm \
+  openjdk \
+  tesseract \
+  tesseract-lang
+```
+
+### Windows
 
 ## Installation Steps
 
@@ -75,8 +91,6 @@ mvn clean -DskipTests install
 ```
 
 **TODO: give an indication of what a successful build looks like.**
-
-### Running
 
 After successfully building Teedy from source, you can launch a Teedy instance by running the following commands from the root directory:
 

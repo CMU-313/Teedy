@@ -52,7 +52,42 @@ A demo is available at [demo.teedy.io](https://demo.teedy.io)
 - [Bulk files importer](https://github.com/sismics/docs/tree/master/docs-importer) (single or scan mode)
 - Tested to one million documents
 
-# Install with Docker
+
+# Native Installation (Preferred Method)
+
+## Requirements
+
+- Java 11+ (JDK 11+)
+- Maven 3+
+- NPM
+- Grunt
+- Tesseract 4 for OCR
+- ffmpeg for video thumbnails
+- mediainfo for video metadata extraction
+- A webapp server like [Jetty](http://eclipse.org/jetty) or [Tomcat](http://tomcat.apache.org)
+
+## Installation Steps
+
+Clone the repository to your local machine (`git clone https://github.com/CMU-313/Teedy`) and then use Maven to build Teedy from source by running the following command from the root directory:
+
+```console
+mvn clean -DskipTests install
+```
+
+**TODO: give an indication of what a successful build looks like.**
+
+### Running
+
+After successfully building Teedy from source, you can launch a Teedy instance by running the following commands from the root directory:
+
+```console
+cd docs-web
+mvn jetty:run
+```
+
+**The default admin password is "admin". Don't forget to change it before going to production.**
+
+# Install with Docker (Non-Preferred Method)
 
 A preconfigured Docker image is available, including OCR and media conversion tools, listening on port 8080. The database is an embedded H2 database but PostgreSQL is also supported for more performance.
 
@@ -175,60 +210,6 @@ networks:
   internet:
     driver: bridge
 ```
-
-# Manual installation
-
-## Requirements
-
-- Java 11
-- Tesseract 4 for OCR
-- ffmpeg for video thumbnails
-- mediainfo for video metadata extraction
-- A webapp server like [Jetty](http://eclipse.org/jetty/) or [Tomcat](http://tomcat.apache.org/)
-
-## Download
-
-The latest release is downloadable here: <https://github.com/sismics/docs/releases> in WAR format. 
-**The default admin password is "admin". Don't forget to change it before going to production.**
-
-## How to build Teedy from the sources
-
-Prerequisites: JDK 11, Maven 3, NPM, Grunt, Tesseract 4
-
-Teedy is organized in several Maven modules:
-
-- docs-core
-- docs-web
-- docs-web-common
-
-First off, clone the repository: `git clone git://github.com/sismics/docs.git`
-or download the sources from GitHub.
-
-### Launch the build
-
-From the root directory:
-
-```console
-mvn clean -DskipTests install
-```
-
-### Run a stand-alone version
-
-From the `docs-web` directory:
-
-```console
-mvn jetty:run
-```
-
-### Build a .war to deploy to your servlet container
-
-From the `docs-web` directory:
-
-```console
-mvn -Pprod -DskipTests clean install
-```
-
-You will get your deployable WAR in the `docs-web/target` directory.
 
 # Contributing
 

@@ -14,14 +14,6 @@ Teedy is an open source, lightweight document management system for individuals 
 
 ![New!](https://teedy.io/img/laptop-demo.png?20180301)
 
-# Demo
-
-A demo is available at [demo.teedy.io](https://demo.teedy.io)
-
-- Guest login is enabled with read access on all documents
-- "admin" login with "admin" password
-- "demo" login with "password" password 
-
 # Features
 
 - Responsive user interface

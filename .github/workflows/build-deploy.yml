@@ -6,7 +6,6 @@ on:
     tags: [v*]
   workflow_dispatch:
 
-
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
@@ -28,9 +27,6 @@ jobs:
         with:
           name: docs-web-ci.war
           path: docs-web/target/docs*.war
-      - name: jacoco-badge-generator
-        uses: cicirello/jacoco-badge-generator@v2.7.0
-
 
   build_docker_image:
     name: Publish to Docker Hub

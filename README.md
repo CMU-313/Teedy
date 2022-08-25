@@ -103,7 +103,7 @@ brew install \
 It is highly recommended that you proceed to install Windows Subsystem Linux (WSL), following the link: [Install Linux on Windows with WSL
 ](https://docs.microsoft.com/en-us/windows/wsl/install). This will allow you to run a Linux distro (Ubuntu's the default) within the Windows environment, and you can then proceed to follow the Linux (Ubuntu 22.04) instructions to install the dependencies.
 
-**Note**: This would mean that you should proceed to do everything within the Linux environment.
+**Note**: This would mean that you should proceed to execute the following instructions within the Linux environment as well.
 
 ## Installation Steps
 

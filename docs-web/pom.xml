@@ -191,7 +191,7 @@
                 </systemProperty>
               </systemProperties>
               <webApp>
-                <contextPath>/docs-web</contextPath>
+                <contextPath>/</contextPath>
                 <overrideDescriptor>src/dev/main/webapp/web-override.xml</overrideDescriptor>
               </webApp>
             </configuration>

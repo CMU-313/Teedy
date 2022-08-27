@@ -38,22 +38,37 @@ jobs:
         run: |
           echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
           echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
-
+      
       - name: Commit badge
         run: |
-          pushd .github/badges
-              git config --local user.email "action@github.com"
-              git config --local user.name "GitHub Action"
-              git add ./*.svg
-              git commit -m "Add/Update badge"
-              git push origin badges
-          popd
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add '.github/badges/points.svg'
+          git commit -m "Add/Update badge"
+        continue-on-error: true
 
-      # - name: Push badge commit
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: badges
+      - name: Push badge commit
+        uses: ad-m/github-push-action@master
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: badges
+
+      # - name: Commit badge
+      #   run: |
+      #     pushd .github/badges
+      #         git config --local user.email "action@github.com"
+      #         git config --local user.name "GitHub Action"
+      #         git add ./*.svg
+      #         git commit -m "Add/Update badge"
+      #         git push origin badges
+      #     popd
+
+      # # - name: Push badge commit
+      # #   uses: ad-m/github-push-action@master
+      # #   with:
+      # #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      # #     branch: badges
           
 
      

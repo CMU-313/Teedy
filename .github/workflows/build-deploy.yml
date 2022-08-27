@@ -41,9 +41,14 @@ jobs:
       
       - name: Commit badge
         run: |
+          mkdir tmp
+          cp .github/badges/*.svg tmp 
+          git checkout badges
+          mkdir -p badges
+          cp ./tmp/*.svg badges
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add '.github/badges/points.svg'
+          git add 'badges/*.svg'
           git commit -m "Add/Update badge"
         continue-on-error: true
 

@@ -46,13 +46,14 @@ jobs:
               git config --local user.name "GitHub Action"
               git add ./*.svg
               git commit -m "Add/Update badge"
+              git push origin badges
           popd
 
-      - name: Push badge commit
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: badges
+      # - name: Push badge commit
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: badges
           
 
      

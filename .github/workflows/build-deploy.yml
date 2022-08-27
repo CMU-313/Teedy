@@ -48,7 +48,7 @@ jobs:
           cp ./tmp/*.svg badges
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add 'badges/*.svg'
+          git add './badges/*.svg'
           git commit -m "Add/Update badge"
         continue-on-error: true
 

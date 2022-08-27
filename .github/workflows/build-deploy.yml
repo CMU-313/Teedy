@@ -40,13 +40,11 @@ jobs:
           echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
 
       - name: Commit badge
-        env:
-          BRANCH: ${{ steps.extract_branch.outputs.branch }}
         run: |
-          pushd badges
+          pushd .github/badges
               git config --local user.email "action@github.com"
               git config --local user.name "GitHub Action"
-              git add .github/badges/*.svg
+              git add ./*.svg
               git commit -m "Add/Update badge"
           popd
 
@@ -55,5 +53,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: badges
+          
 
      

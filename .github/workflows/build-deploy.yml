@@ -58,6 +58,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: badges
+          force: true
 
       # - name: Commit badge
       #   run: |

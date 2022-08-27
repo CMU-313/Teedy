@@ -43,7 +43,7 @@ jobs:
         run: |
           mkdir tmp
           cp .github/badges/*.svg tmp 
-          git checkout badges
+          git checkout -b badges
           mkdir -p badges
           cp ./tmp/*.svg badges
           git config --local user.email "action@github.com"

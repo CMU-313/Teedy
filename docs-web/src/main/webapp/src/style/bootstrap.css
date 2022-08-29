@@ -526,7 +526,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: #000;
 }
 .text-primary {
   color: #337ab7;
@@ -550,11 +550,11 @@ a.text-info:focus {
   color: #245269;
 }
 .text-warning {
-  color: #8a6d3b;
+  color: #000;
 }
 a.text-warning:hover,
 a.text-warning:focus {
-  color: #66512c;
+  color: #000;
 }
 .text-danger {
   color: #a94442;

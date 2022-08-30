@@ -113,8 +113,6 @@ Clone the repository to your local machine (`git clone https://github.com/CMU-31
 mvn clean -DskipTests install
 ```
 
-**TODO: give an indication of what a successful build looks like.**
-
 After successfully building Teedy from source, you can launch a Teedy instance by running the following commands from the root directory:
 
 ```console

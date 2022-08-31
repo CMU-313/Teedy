@@ -57,6 +57,7 @@
     "search_clear": "Limpiar",
     "any_language": "Cualquier idioma",
     "add_document": "Añadir un documento",
+    "more_options": "Mas opciones",
     "import_eml": "Importar desde un correo (formato EML)",
     "tags": "Etiquetas",
     "no_tags": "Ninguna etiqueta",
@@ -107,6 +108,7 @@
       "workflow_comment": "Añadir comentario de flujo de trabajo",
       "workflow_validated_title": "Flujo de trabajo validado",
       "workflow_validated_message": "El flujo de trabajo ha sido validado con éxito",
+      "actions": "Comportamiento",
       "content": {
         "content": "Contenido",
         "delete_file_title": "Eliminar archivo",

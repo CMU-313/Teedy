@@ -57,6 +57,7 @@
     "search_clear": "Vider",
     "any_language": "Toutes les langues",
     "add_document": "Ajouter un document",
+    "more_options": "Plus d'options",
     "import_eml": "Importer depuis un email (format EML)",
     "tags": "Tags",
     "no_tags": "Aucun tag",
@@ -107,6 +108,7 @@
       "workflow_comment": "Ajouter un commentaire de workflow",
       "workflow_validated_title": "Étape de workflow validée",
       "workflow_validated_message": "L'étape de workflow a été validée avec succès.",
+      "actions": "Actions",
       "content": {
         "content": "Contenu",
         "delete_file_title": "Supprimer un fichier",

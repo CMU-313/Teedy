@@ -57,6 +57,7 @@
     "search_clear": "Καθάρισμα",
     "any_language": "Οποιαδήποτε γλώσσα",
     "add_document": "Προσθήκη εγγράφου",
+    "more_options": "Περισσότερες επιλογές",
     "import_eml": "Εισαγωγή απλο ένα email (μορφή EML)",
     "tags": "Ετικέτες",
     "no_tags": "Δεν υπάρχουν ετικέτες",
@@ -107,6 +108,7 @@
       "workflow_comment": "Προσθήκη σχολίου ροής εργασίας",
       "workflow_validated_title": "Το βήμα ροής εργασίας επαληθεύτηκε",
       "workflow_validated_message": "Το βήμα ροής εργασίας έχει επαληθευτεί επιτυχώς.",
+      "actions": "Ενέργειες",
       "content": {
         "content": "Περιεχόμενο",
         "delete_file_title": "Διαγραφή αρχείου",

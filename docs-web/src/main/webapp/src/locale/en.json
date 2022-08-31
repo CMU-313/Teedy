@@ -57,6 +57,7 @@
     "search_clear": "Clear",
     "any_language": "Any language",
     "add_document": "Add a document",
+    "more_options": "More options",
     "import_eml": "Import from an email (EML format)",
     "tags": "Tags",
     "no_tags": "No tags",
@@ -107,6 +108,7 @@
       "workflow_comment": "Add a workflow comment",
       "workflow_validated_title": "Workflow step validated",
       "workflow_validated_message": "The workflow step has been successfully validated.",
+      "actions": "Actions",
       "content": {
         "content": "Content",
         "delete_file_title": "Delete file",

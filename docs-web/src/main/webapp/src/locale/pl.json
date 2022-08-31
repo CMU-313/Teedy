@@ -57,6 +57,7 @@
     "search_clear": "Czyść",
     "any_language": "Dowolny język",
     "add_document": "Dodaj dokument",
+    "more_options": "Więcej opcji",
     "import_eml": "Importuj z wiadomości e-mail (format EML)",
     "tags": "Etykiety",
     "no_tags": "Brak etykiet",
@@ -107,6 +108,7 @@
       "workflow_comment": "Dodaj komentarz do przepływu",
       "workflow_validated_title": "Etap przepływu sprawdzony",
       "workflow_validated_message": "Etap przepływu został zweryfikowany poprawnie.",
+      "actions": "działania",
       "content": {
         "content": "Treść",
         "delete_file_title": "Usuń plik",

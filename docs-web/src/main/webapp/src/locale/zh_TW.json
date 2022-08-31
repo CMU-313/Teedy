@@ -49,6 +49,7 @@
     "search_clear": "清除",
     "any_language": "任何語言",
     "add_document": "添加一個文檔",
+    "more_options": "更多選擇",
     "import_eml": "從電子郵件導入（EML格式）",
     "tags": "標籤",
     "no_tags": "無標籤",
@@ -97,6 +98,7 @@
       "workflow_comment": "添加工作流程評論",
       "workflow_validated_title": "工作流程步驟已驗證",
       "workflow_validated_message": "工作流步驟已成功驗證。",
+      "actions": "行動",
       "content": {
         "content": "內容",
         "delete_file_title": "刪除文檔",

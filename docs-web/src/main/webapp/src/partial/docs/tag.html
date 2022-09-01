@@ -23,7 +23,8 @@
           <input type="text" name="name" ng-attr-placeholder="{{ 'tag.new_tag' | translate }}" class="form-control"
                  ng-maxlength="36" required ng-model="tag.name" ui-validate="{ space: '!$value || $value.indexOf(\' \') == -1 && $value.indexOf(\':\') == -1' }">
         </div>
-        <span class="btn btn-primary" ng-disabled="!tagForm.$valid" ng-click="addTag()">{{ 'add' | translate }}</span>
+        <!--aria-disabled reference: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled-->
+        <button class="btn btn-primary" ng-disabled="!tagForm.$valid" ng-click="addTag()" aria-disabled={{!tagForm.$valid}}>{{ 'add' | translate }}</button>
         <span class="text-danger" ng-show="tagForm.name.$error.space && tagForm.$dirty">{{ 'validation.no_space' | translate }}</span>
       </form>
 

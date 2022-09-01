@@ -8,6 +8,11 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+    
+}
+:root {
+  --gray-800: rgb(83, 83, 83);
+  /*citation: https://www.w3schools.com/css/css3_variables.asp*/
 }
 body {
   margin: 0;
@@ -526,7 +531,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: var(--gray-800);
 }
 .text-primary {
   color: #337ab7;
@@ -660,7 +665,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted var(--gray-800);
 }
 .initialism {
   font-size: 90%;
@@ -683,7 +688,7 @@ blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
-  color: #777;
+  color: var(--gray-800);
 }
 blockquote footer:before,
 blockquote small:before,
@@ -1440,7 +1445,7 @@ table {
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #777;
+  color: var(--gray-800);
   text-align: left;
 }
 th {
@@ -2409,7 +2414,7 @@ fieldset[disabled] .btn-success.focus {
 }
 .btn-info {
   color: #fff;
-  background-color: #5bc0de;
+  background-color: var(--blue-800);
   border-color: #46b8da;
 }
 .btn-info:focus,
@@ -2457,11 +2462,11 @@ fieldset[disabled] .btn-info:focus,
 .btn-info.disabled.focus,
 .btn-info[disabled].focus,
 fieldset[disabled] .btn-info.focus {
-  background-color: #5bc0de;
+  background-color: var(--blue-800);
   border-color: #46b8da;
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: var(--blue-800);
   background-color: #fff;
 }
 .btn-warning {
@@ -2607,7 +2612,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #777;
+  color: var(--gray-800);
   text-decoration: none;
 }
 .btn-lg,
@@ -2750,7 +2755,7 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
-  color: #777;
+  color: var(--gray-800);
 }
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
@@ -2779,7 +2784,7 @@ tbody.collapse.in {
   padding: 3px 20px;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #777;
+  color: var(--gray-800);
   white-space: nowrap;
 }
 .dropdown-backdrop {
@@ -3143,11 +3148,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 .nav > li.disabled > a {
-  color: #777;
+  color: var(--gray-800);
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #777;
+  color: var(--gray-800);
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -3625,7 +3630,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: var(--gray-800);
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -3633,10 +3638,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777;
+  color: var(--gray-800);
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: var(--gray-800);
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -3677,7 +3682,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777;
+    color: var(--gray-800);
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -3698,13 +3703,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #777;
+  color: var(--gray-800);
 }
 .navbar-default .navbar-link:hover {
   color: #333;
 }
 .navbar-default .btn-link {
-  color: #777;
+  color: var(--gray-800);
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -3837,7 +3842,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   content: "/\00a0";
 }
 .breadcrumb > .active {
-  color: #777;
+  color: var(--gray-800);
 }
 .pagination {
   display: inline-block;
@@ -3897,7 +3902,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #777;
+  color: var(--gray-800);
   cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;
@@ -3967,7 +3972,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #777;
+  color: var(--gray-800);
   cursor: not-allowed;
   background-color: #fff;
 }
@@ -3997,7 +4002,7 @@ a.label:focus {
   top: -1px;
 }
 .label-default {
-  background-color: #777;
+  background-color: var(--gray-800);
 }
 .label-default[href]:hover,
 .label-default[href]:focus {
@@ -4018,7 +4023,7 @@ a.label:focus {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: var(--blue-800);
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
@@ -4049,7 +4054,7 @@ a.label:focus {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: #777;
+  background-color: var(--gray-800);
 }
 .badge:empty {
   display: none;
@@ -4289,7 +4294,7 @@ a.thumbnail.active {
   background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: var(--blue-800);
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
@@ -4404,7 +4409,7 @@ button.list-group-item {
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
-  color: #777;
+  color: var(--gray-800);
   cursor: not-allowed;
   background-color: #eee;
 }
@@ -4416,7 +4421,7 @@ button.list-group-item {
 .list-group-item.disabled .list-group-item-text,
 .list-group-item.disabled:hover .list-group-item-text,
 .list-group-item.disabled:focus .list-group-item-text {
-  color: #777;
+  color: var(--gray-800);
 }
 .list-group-item.active,
 .list-group-item.active:hover,

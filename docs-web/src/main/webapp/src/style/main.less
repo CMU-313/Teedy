@@ -1,3 +1,8 @@
+:root{
+  --blue-800: #1f3f7f;
+  //citation: https://www.w3schools.com/css/css3_variables.asp
+}
+
 // Logo
 .navbar-logo {
   margin: 3px;
@@ -192,7 +197,7 @@ ul.tag-tree {
 // File thumbnails
 .thumbnail {
   &.active {
-    border: 1px solid #2ab2dc;
+    border: 1px solid var(--blue-800);;
   }
 
   .file-processing-indicator {
@@ -200,7 +205,7 @@ ul.tag-tree {
     z-index: 2;
     margin-left: 8px;
     margin-top: 8px;
-    color: #2ab2dc;
+    color: var(--blue-800);;
   }
 
   a.file-thumbnail {
@@ -693,7 +698,7 @@ input[readonly].share-link {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #2ab2dc;
+  color: var(--blue-800);
   background: none;
 }
 

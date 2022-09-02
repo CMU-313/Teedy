@@ -23,7 +23,7 @@
                  uib-typeahead="suggestion for suggestion in suggestions"
                  typeahead-focus-first="false"
                  ng-attr-placeholder="{{ 'document.search' | translate }}" ng-model="search" />
-          <span class="input-group-addon btn" ng-click="openSearch()">
+          <span tabindex="0" class="input-group-addon btn" ng-click="openSearch()">
             <div uib-dropdown
                  auto-close="disabled" is-open="searchOpened" dropdown-append-to="searchDropdownAnchor">
               <span class="btn-open-search">
@@ -171,13 +171,13 @@
 
       <!-- Display mode (list or grid) -->
       <div class="btn-group mt-10 ml-10 pull-right">
-          <span class="btn btn-default" ng-class="{ active: displayMode == 'list' }"
+          <span tabindex="0" class="btn btn-default" ng-class="{ active: displayMode == 'list' }"
                 uib-tooltip="{{ 'document.display_mode_list' | translate }}"
                 tooltip-append-to-body="true"
                 ng-click="displayMode = 'list'">
             <span class="fas fa-list"></span>
           </span>
-        <span class="btn btn-default" ng-class="{ active: displayMode == 'grid' }"
+        <span tabindex="0" class="btn btn-default" ng-class="{ active: displayMode == 'grid' }"
               uib-tooltip="{{ 'document.display_mode_grid' | translate }}"
               tooltip-append-to-body="true"
               ng-click="displayMode = 'grid'">

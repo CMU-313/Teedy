@@ -526,7 +526,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: rgb(0, 0, 0);
 }
 .text-primary {
   color: #337ab7;
@@ -3621,8 +3621,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #000000;
+  border-color: #000000;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -3667,7 +3667,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  background-color: #000;
+  border-color: #000000;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,

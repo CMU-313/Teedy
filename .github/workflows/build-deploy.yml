@@ -3,7 +3,7 @@ name: Maven CI/CD
 on:
   push:
     branches: 
-      - '*'
+      - 'main'
     tags: [v*]
   workflow_dispatch:
 

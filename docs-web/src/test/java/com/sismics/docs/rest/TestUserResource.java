@@ -240,9 +240,7 @@ public class TestUserResource extends BaseJerseyTest {
         response = target().path("/user/login").request()
                 .post(Entity.form(new Form()
                         .param("username", "alice")
-                        .param("password", "password42"))
-                        // .param("password", "12345678"))
-                        );
+                        .param("password", "password42")));
         Assert.assertEquals(Status.OK, Status.fromStatusCode(response.getStatus()));
         aliceAuthToken = clientUtil.getAuthenticationCookie(response);
 

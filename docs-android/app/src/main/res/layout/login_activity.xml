@@ -34,7 +34,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:ems="10"
+            android:ems="13"
             android:hint="@string/server"
             android:inputType="textNoSuggestions">
         </EditText>
@@ -44,7 +44,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:ems="10"
+            android:ems="13"
             android:hint="@string/username"
             android:inputType="textNoSuggestions">
 
@@ -56,7 +56,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:ems="10"
+            android:ems="13"
             android:hint="@string/password"
             android:inputType="textPassword">
         </EditText>
@@ -67,7 +67,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:ems="10"
+            android:ems="13"
             android:hint="@string/validation_code"
             android:inputType="number">
         </EditText>

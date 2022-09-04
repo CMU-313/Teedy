@@ -2258,8 +2258,6 @@ fieldset[disabled] a.btn {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
-  height: 48px;
-  width: 48px;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,

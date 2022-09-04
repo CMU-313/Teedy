@@ -222,10 +222,12 @@ public class UserResource extends BaseResource {
         if (email != null) {
             user.setEmail(email);
         }
+        // Update the storage quota
         if (StringUtils.isNotBlank(storageQuotaStr)) {
             Long storageQuota = ValidationUtil.validateLong(storageQuotaStr, "storage_quota");
             user.setStorageQuota(storageQuota);
         }
+        // Update disabled
         if (disabled != null) {
             // Cannot disable the admin user or the guest user
             RoleBaseFunctionDao userBaseFuction = new RoleBaseFunctionDao();

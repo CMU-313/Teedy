@@ -2857,7 +2857,7 @@
           ngController: ngControllerDirective,
           ngForm: ngFormDirective,
           ngHide: ngHideDirective,
-          ngIf: ngIfDirective,
+          ngIfDirective,
           ngInclude: ngIncludeDirective,
           ngInit: ngInitDirective,
           ngNonBindable: ngNonBindableDirective,

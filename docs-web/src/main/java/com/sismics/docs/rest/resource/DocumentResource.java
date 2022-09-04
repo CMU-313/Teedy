@@ -674,7 +674,7 @@ public class DocumentResource extends BaseResource {
     /**
      * Creates a new document.
      *
-     * @api {put} /document Add a document
+     * @api {put} /document 
      * @apiName PutDocument
      * @apiGroup Document
      * @apiParam {String} title Title

@@ -9,6 +9,8 @@ import javax.json.JsonObject;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.BadRequestException;
+import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class TestGroupResource extends BaseJerseyTest {
         target().path("/user/trashme").request()
                 .cookie(TokenBasedSecurityFilter.COOKIE_NAME, admin2Token)
                 .delete(JsonObject.class);
-        
+       
         // Get all groups
         JsonObject json = target().path("/group")
                 .queryParam("sort_column", "1")
@@ -188,5 +190,48 @@ public class TestGroupResource extends BaseJerseyTest {
         Assert.assertEquals(2, groups.size());
         Assert.assertTrue(groupList.contains("g11"));
         Assert.assertTrue(groupList.contains("g112"));
+    }
+    /**
+     * Test deleting null group.
+     */
+    @Test(expected = NotFoundException.class)
+    public void testDeleteNullGroup(){
+        // Login admin
+        String adminToken = clientUtil.login("admin", "admin", false);
+
+        // Delete invalid group
+        target().path("/group/foo").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .delete(JsonObject.class);
+    }
+    /**
+     * Test deleting group used in routemodel.
+     */
+    @Test(expected = BadRequestException.class)
+    public void testDeleteRouteModelGroup(){
+        // Login admin
+        String adminToken = clientUtil.login("admin", "admin", false);
+
+        // Create group
+        clientUtil.createGroup("g112");
+        
+        // Add tag
+        target().path("/tag").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .put(Entity.form(new Form()
+                        .param("name", "TagRoute")
+                        .param("color", "#ff0000")), JsonObject.class);
+
+        // Add routemodel
+        target().path("/routemodel").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .put(Entity.form(new Form()
+                        .param("name", "Workflow validation 1")
+                        .param("steps", "[{\"type\":\"VALIDATE\",\"transitions\":[{\"name\":\"VALIDATED\",\"actions\":[]}],\"target\":{\"name\":\"g112\",\"type\":\"GROUP\"},\"name\":\"Check the document's metadata\"}]")), JsonObject.class);
+
+        // Delete invalid group
+        target().path("/group/g112").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .delete(JsonObject.class);
     }
 }

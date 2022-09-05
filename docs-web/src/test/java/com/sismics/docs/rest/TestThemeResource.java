@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import javax.json.JsonObject;
+import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
@@ -103,5 +104,22 @@ public class TestThemeResource extends BaseJerseyTest {
         // Get the background
         response = target().path("/theme/image/background").request().get();
         Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+    }
+
+    @Test
+    public void testThemeResourceNullParameters() throws Exception {
+        // Login admin
+        String adminToken = clientUtil.login("admin", "admin", false);
+
+        // Update theme without setting params (null)
+        target().path("/theme").request()
+        .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+        .post(Entity.form(new Form()), JsonObject.class);
+
+        // Get the theme configuration
+        JsonObject json = target().path("/theme").request()
+                .get(JsonObject.class);
+        Assert.assertEquals("Teedy", json.getString("name"));
+        Assert.assertEquals("#ffffff", json.getString("color"));
     }
 }

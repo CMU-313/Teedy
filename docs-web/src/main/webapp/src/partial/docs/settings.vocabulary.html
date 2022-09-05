@@ -26,13 +26,15 @@
       <tbody>
         <tr class="info">
           <td>
-            <input type="text" ng-attr-placeholder="{{ 'settings.vocabulary.new_entry' | translate }}" class="form-control" ng-model="entry.value" maxlength="500" />
+            <label for="new-value-entry">New Value Name</label>
+            <input type="text" ng-attr-placeholder="{{ 'settings.vocabulary.new_entry' | translate }}" class="form-control" ng-model="entry.value" maxlength="500" id="new-value-entry" aria-label="New Value Entry"/>
           </td>
           <td>
-            <input type="number" class="form-control" ng-model="entry.order" />
+            <label for="new-order-entry">New Order Number</label>
+            <input type="number" class="form-control" ng-model="entry.order" id="new-order-entry" aria-label="New Order Entry"/>
           </td>
           <td>
-            <span ng-click="addEntry(entry)" class="fas fa-plus pointer"></span>
+            <span ng-click="addEntry(entry)" class="fas fa-plus pointer" aria-label="Add Item">&nbsp; Add</span>
           </td>
         </tr>
         <tr>
@@ -40,13 +42,15 @@
         </tr>
         <tr ng-repeat="entry in entries | orderBy: 'order'">
           <td>
-            <input type="text" class="form-control" ng-model="entry.value" maxlength="500" ng-blur="updateEntry(entry)" />
+            <label for="value-entry-{{$index}}">Value Name (Item {{$index + 1}})</label>
+            <input type="text" class="form-control" ng-model="entry.value" maxlength="500" ng-blur="updateEntry(entry)" id="value-entry-{{$index}}"/>
           </td>
           <td>
-            <input type="number" class="form-control" ng-model="entry.order" ng-blur="updateEntry(entry)" />
+            <label for="order-entry-{{$index}}">Order Number</label>
+            <input type="number" class="form-control" ng-model="entry.order" ng-blur="updateEntry(entry)" id="order-entry-{{$index}}"/>
           </td>
           <td>
-            <span ng-click="deleteEntry(entry)" class="fas fa-trash pointer"></span>
+            <span ng-click="deleteEntry(entry)" class="fas fa-trash pointer" aria-label="Delete Item {{$index + 1}}">&nbsp; Delete</span>
           </td>
         </tr>
       </tbody>

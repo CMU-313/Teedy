@@ -228,27 +228,19 @@ public class TestUserResource extends BaseJerseyTest {
                 .get(JsonObject.class);
         Assert.assertEquals("alice2@docs.com", json.getString("email"));
 
-        // User alice updates her information + changes her password & quota
-        json = target().path("/user").request()
-                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, aliceAuthToken)
+        // User alice updates her information + changes her storage quota
+        json = target().path("/user/alice").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
                 .post(Entity.form(new Form()
-                        .param("password", "password42")
-                        .param("storage_quota", "12345")), JsonObject.class);
+                        .param("storage_quota", "10000000")
+                        ), JsonObject.class);
         Assert.assertEquals("ok", json.getString("status"));
-        
-        // Login alice with new password
-        response = target().path("/user/login").request()
-                .post(Entity.form(new Form()
-                        .param("username", "alice")
-                        .param("password", "password42")));
-        Assert.assertEquals(Status.OK, Status.fromStatusCode(response.getStatus()));
-        aliceAuthToken = clientUtil.getAuthenticationCookie(response);
 
-        // Check that the storage quota was also updated
+        // Check that the storage quota was updated
         json = target().path("/user").request()
                 .cookie(TokenBasedSecurityFilter.COOKIE_NAME, aliceAuthToken)
                 .get(JsonObject.class);
-        Assert.assertEquals(12345L, json.getJsonNumber("storage_quota").longValue());
+        Assert.assertEquals(10000000L, json.getJsonNumber("storage_quota").longValue());
         
         // Delete user alice
         target().path("/user").request()

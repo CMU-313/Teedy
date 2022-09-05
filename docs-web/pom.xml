@@ -139,6 +139,17 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0.1</version>
+    </dependency>
+  
+    <dependency>
+      <groupId>org.resthub</groupId>
+      <artifactId>resthub-web-common</artifactId>
+      <version>2.2.0</version>
+    </dependency>
   </dependencies>
 
   <build>

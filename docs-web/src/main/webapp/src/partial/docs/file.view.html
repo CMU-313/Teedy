@@ -36,7 +36,7 @@
 
 <div class="text-center" style="position: relative;" ng-if="$stateParams.fileId">
   <!-- Standard preview -->
-  <img ng-src="../api/file/{{ $stateParams.fileId }}/data?size=web"
+  <img alt="" ng-src="../api/file/{{ $stateParams.fileId }}/data?size=web"
        ng-init="error = false"
        img-error="error = true"
        ng-show="!error && canDisplayPreview()" />

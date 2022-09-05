@@ -11,7 +11,7 @@
             <span class="caret"></span>
           </button>
           <ul uib-dropdown-menu>
-            <li><a href ngf-select="importEml($file)">{{ 'document.import_eml' | translate }}</a></li>
+            <li><a href="#/document/add" ngf-select="importEml($file)">{{ 'document.import_eml' | translate }}</a></li>
           </ul>
         </div>
       </div>
@@ -162,7 +162,7 @@
 
       <!-- Navigation breadcrumb -->
       <ol class="breadcrumb breadcrumb-navigation pull-left mt-10">
-        <li><a href ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
+        <li><a href="#/document" ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
         <li ng-repeat="tag in getCurrentNavigation()" ng-class="{ active: tag.id == navigatedTag.id }">
           <a class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id != navigatedTag.id" href ng-click="navigateToTag(tag)">{{ tag.name }}</a>
           <span class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id == navigatedTag.id">{{ tag.name }}</span>

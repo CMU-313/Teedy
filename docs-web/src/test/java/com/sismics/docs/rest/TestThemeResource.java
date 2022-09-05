@@ -122,4 +122,18 @@ public class TestThemeResource extends BaseJerseyTest {
         Assert.assertEquals("Teedy", json.getString("name"));
         Assert.assertEquals("#ffffff", json.getString("color"));
     }
+
+    @Test(expected = ForbiddenException.class)
+    public void testThemeResourceUnauthenticatedPost() throws Exception {
+        // Login admin
+        String adminToken = clientUtil.login("admin", "admin", false);
+
+        // Logout admin
+        clientUtil.logout(adminToken);
+
+        // Update theme (post)
+        target().path("/theme").request()
+        .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+        .post(Entity.form(new Form()), JsonObject.class);
+    }
 }

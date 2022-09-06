@@ -1,32 +1,34 @@
-<h1>
-  <span translate="settings.user.title"></span>
-  <a class="btn btn-primary" href="#/settings/user/add">{{ 'settings.user.add_user' | translate }}</a>
-</h1>
+<html lang="en">
+  <h1>
+    <span translate="settings.user.title"></span>
+    <a class="btn btn-primary" href="#/settings/user/add">{{ 'settings.user.add_user' | translate }}</a>
+  </h1>
 
-<div class="row">
-  <div class="col-md-4 well">
-    <table class="table table-hover table-users">
-      <thead>
-        <tr>
-          <th>{{ 'settings.user.username' | translate }}</th>
-          <th>{{ 'settings.user.create_date' | translate }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="user in users | orderBy: 'username'" ng-click="editUser(user)"
-            ng-class="{ active: $stateParams.username == user.username }">
-          <td>
-            <span ng-if="!user.disabled">{{ user.username }}</span>
-            <s ng-if="user.disabled">{{ user.username }}</s>
-            <span class="fas fa-lock" ng-show="user.totp_enabled" uib-tooltip="{{ 'settings.user.totp_enabled' | translate }}"></span>
-          </td>
-          <td>{{ user.create_date | date: dateFormat }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="row">
+    <div class="col-md-4 well">
+      <table class="table table-hover table-users">
+        <thead>
+          <tr>
+            <th>{{ 'settings.user.username' | translate }}</th>
+            <th>{{ 'settings.user.create_date' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in users | orderBy: 'username'" ng-click="editUser(user)"
+              ng-class="{ active: $stateParams.username == user.username }">
+            <td>
+              <span ng-if="!user.disabled">{{ user.username }}</span>
+              <s ng-if="user.disabled">{{ user.username }}</s>
+              <span class="fas fa-lock" ng-show="user.totp_enabled" uib-tooltip="{{ 'settings.user.totp_enabled' | translate }}"></span>
+            </td>
+            <td>{{ user.create_date | date: dateFormat }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <div class="col-md-8">
-    <div ui-view="user"></div>
+    <div class="col-md-8">
+      <div ui-view="user"></div>
+    </div>
   </div>
-</div>
+</html>

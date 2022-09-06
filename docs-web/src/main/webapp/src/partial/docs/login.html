@@ -22,7 +22,7 @@
   /* Smaller links everywhere on login */
   a {
     font-size: 90%;
-    color: #666;
+    color: black;
   }
 </style>
 <div class="row vertical-center">
@@ -54,7 +54,7 @@
                    ng-attr-placeholder="{{ 'login.validation_code' | translate }}" ng-model="user.code" />
           </div>
 
-          <div class="checkbox text-muted">
+          <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="user.remember" name="remember" /> {{ 'login.remember_me' | translate }}
             </label>
@@ -62,7 +62,7 @@
 
           <div class="row">
             <div class="col-md-6">
-              <button type="submit" class="btn btn-primary" ng-click="login()">
+              <button type="submit" class="btn btn-dark" ng-click="login()">
                 <span class="fas fa-check"></span> {{ 'login.submit' | translate }}
               </button>
             </div>

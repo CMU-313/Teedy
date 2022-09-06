@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<head>
+  <title>Settings Monitoring Page</title>
+  <meta name="description" content="Settings monitoring page is for managing queued tasks.">
+</head>
+
+</meta name="description" content="settings monitoring background tasks">
 <h2 translate="settings.monitoring.background_tasks"></h2>
 <p>
   <strong>{{ 'settings.monitoring.queued_tasks' | translate: { count: app.queued_tasks } }}</strong>
@@ -6,6 +13,7 @@
 </p>
 <p>{{ 'settings.monitoring.queued_tasks_explain' | translate }}</p>
 
+</meta name="description" content="settings monitoring indexing">
 <h2 translate="settings.monitoring.indexing"></h2>
 {{ 'settings.monitoring.indexing_info' | translate }}
 <div class="mt-10">
@@ -13,6 +21,7 @@
   <span class="text-danger" ng-show="reindexingStarted"><strong>{{ 'settings.monitoring.reindexing_started' | translate }}</strong></span>
 </div>
 
+</meta name="description" content="settings monitoring server logs">
 <h2 translate="settings.monitoring.server_logs"></h2>
 <table class="table table-hover table-logs">
   <thead>

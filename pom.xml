@@ -11,6 +11,7 @@
   <name>Docs Parent</name>
 
   <properties>
+    <docs.home>home/yihanl/teedy/docs</docs.home>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

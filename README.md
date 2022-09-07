@@ -117,7 +117,7 @@ After successfully building Teedy from source, you can launch a Teedy instance b
 
 ```console
 cd docs-web
-mvn jetty:run
+mvn jetty:run -Ddocs.home="something"
 ```
 
 **The default admin password is "admin". Don't forget to change it before going to production.**

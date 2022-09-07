@@ -23,7 +23,7 @@
       <div class="col-sm-2">
         <div class="input-group" id="inputColor" ng-class="{ 'has-error': !editTagForm.color.$valid && tagForm.$dirty }">
           <span colorpicker class="input-group-addon btn btn-default" data-color="#3a87ad" ng-model="tag.color" ng-style="{ 'background': tag.color }">&nbsp;</span>
-          <button class="btn btn-default" ng-click="hexaField = true" ng-show="!hexaField"><span class="fas fa-microchip"></span></button>
+          <button aria-label = "Enter new Hex color code for tag" class="btn btn-default" ng-click="hexaField = true" ng-show="!hexaField"><span class="fas fa-microchip"></span></button>
           <input type="text" name="color" class="form-control" ng-maxlength="7" ng-model="tag.color" ng-show="hexaField">
         </div>
       </div>

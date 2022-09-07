@@ -9,9 +9,148 @@
     <link rel="shortcut icon" href="../api/theme/image/logo" />
     <link rel="manifest" href="manifest.json" />
     <!-- ref:css style/style.min.css?@build.date@ -->
-    <link rel="stylesheet" href="style/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="style/fontawesome.css" type="text/css" />
-    <link rel="stylesheet" href="style/colorpicker.css" type="text/css" />
+
+    <style type="text/css">
+      html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+        display: block;
+      }
+      a {
+        background-color: transparent;
+      }
+      b, strong {
+        font-weight: bold;
+      }
+      h1 {
+        margin: .67em 0;
+        font-size: 2em;
+      }
+      button, input, optgroup, select, textarea {
+        margin: 0;
+        font: inherit;
+        color: inherit;
+      }
+      button {
+        overflow: visible;
+      }
+      button, select {
+        text-transform: none;
+      }
+      button, html input[type="button"], input[type="reset"], input[type="submit"] {
+        -webkit-appearance: button;
+        cursor: pointer;
+      }
+      button[disabled], html input[disabled] {
+        cursor: default;
+      }
+      ul, ol {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      ul ul, ol ul, ul ol, ol ol {
+        margin-bottom: 0;
+      }
+      .list-inline {
+        padding-left: 0;
+        margin-left: -5px;
+        list-style: none;
+      }
+      .list-inline > li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+        float: left;
+      }
+      .col-xs-12 {
+        width: 100%;
+      }
+      table {
+        background-color: transparent;
+      }
+      th {
+        text-align: left;
+      }
+      .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+      .table > thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+      }
+      .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+        border-top: 0;
+      }
+      label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="search"] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    </style>
+
+    <style type="text/css">
+      .fa, .fas, .far, .fal, .fab {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+      }
+    </style>
+
+    <style type="text/css">
+      .colorpicker {
+        *zoom: 1; top: 0;
+        left: 0;
+        padding: 4px;
+        min-width: 120px;
+        margin-top: 1px;
+        border-radius: 4px;
+        z-index: 1100;
+      }
+    </style>
+
+    <link rel="preload" href="style/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="styles/bootstrap.css"></noscript>
+    <link rel="preload" href="style/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="styles/fontawesome.css"></noscript>
+    <link rel="preload" href="style/colorpicker.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="styles/colorpicker.css"></noscript>
+    
     <link rel="stylesheet" href="style/pell.css" type="text/css" />
     <link rel="stylesheet" href="style/ng-onboarding.css" type="text/css" />
     <link rel="stylesheet/less" href="style/main.less" type="text/css" />

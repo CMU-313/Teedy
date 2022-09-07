@@ -9,7 +9,6 @@
 /.idea
 /.project
 *.iml
-.vscode
 node_modules
 import_test
 teedy-importer-linux

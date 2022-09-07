@@ -180,6 +180,28 @@
         </resources>
 
         <plugins>
+          
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.8</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+              </execution>
+              <!-- attached to Maven test phase -->
+              <execution>
+                <id>report</id>
+                <phase>test</phase>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
           <plugin>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-maven-plugin</artifactId>
@@ -188,6 +210,10 @@
                 <systemProperty>
                   <name>application.mode</name>
                   <value>dev</value>
+                </systemProperty>
+                <systemProperty>
+                  <name>docs.home</name>
+                  <value>/home/cisner/teedy/docs</value>
                 </systemProperty>
               </systemProperties>
               <webApp>

@@ -86,7 +86,7 @@
           <div class="v-align file-name" ng-if="file.name" title="{{ file.name }} (v{{ file.version + 1 }}.0)">{{ file.name }}</div>
           <div class="v-align" ng-show="document.writable">
             <div uib-dropdown>
-              <button class="btn btn-default" uib-dropdown-toggle>
+              <button class="btn btn-default" uib-dropdown-toggle aria-label = "dropdown-toggle">
                 <span class="fas fa-ellipsis-v"></span>
               </button>
               <ul class="dropdown-menu" uib-dropdown-menu>
@@ -178,7 +178,7 @@
       <td>v{{ file.version + 1 }}.0</td>
       <td ng-show="document.writable">
         <div uib-dropdown>
-          <button class="btn btn-default" uib-dropdown-toggle>
+          <button class="btn btn-default" uib-dropdown-toggle aria-label = "dropdown toggle">
             <span class="fas fa-ellipsis-v"></span>
           </button>
           <ul class="dropdown-menu" uib-dropdown-menu>
@@ -240,7 +240,7 @@
   <button class="btn btn-primary" ngf-select
     ngf-change="fileDropped($files, $event)"
     input-file-multiple="multiple"
-    ngf-multiple="true">
+    ngf-multiple="true" aria-label = "file drop button">
     {{ 'document.view.content.add_files' | translate }}
   </button>
 </p>

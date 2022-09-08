@@ -1,0 +1,53 @@
+08 Sep 2022 08:05:54,096 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 08:05:54,905 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+08 Sep 2022 08:05:54,908 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:83) Unable to get database version: Table T_CONFIG not found 
+08 Sep 2022 08:05:54,909 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:98) Executing initial schema creation script 
+08 Sep 2022 08:05:54,913 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-000-0.sql 
+08 Sep 2022 08:05:54,975 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-000-1.sql 
+08 Sep 2022 08:05:54,978 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 0, new version is 27, executing database incremental update scripts 
+08 Sep 2022 08:05:54,980 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-001-0.sql 
+08 Sep 2022 08:05:55,008 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-002-0.sql 
+08 Sep 2022 08:05:55,013 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-003-0.sql 
+08 Sep 2022 08:05:55,018 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-004-0.sql 
+08 Sep 2022 08:05:55,028 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-005-0.sql 
+08 Sep 2022 08:05:55,030 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-006-0.sql 
+08 Sep 2022 08:05:55,150 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-007-0.sql 
+08 Sep 2022 08:05:55,153 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-008-0.sql 
+08 Sep 2022 08:05:55,157 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-009-0.sql 
+08 Sep 2022 08:05:55,163 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-010-0.sql 
+08 Sep 2022 08:05:55,165 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-011-0.sql 
+08 Sep 2022 08:05:55,169 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-012-0.sql 
+08 Sep 2022 08:05:55,174 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-013-0.sql 
+08 Sep 2022 08:05:55,176 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-014-0.sql 
+08 Sep 2022 08:05:55,180 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-015-0.sql 
+08 Sep 2022 08:05:55,190 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-016-0.sql 
+08 Sep 2022 08:05:55,191 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-017-0.sql 
+08 Sep 2022 08:05:55,194 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-018-0.sql 
+08 Sep 2022 08:05:55,210 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-019-0.sql 
+08 Sep 2022 08:05:55,212 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-020-0.sql 
+08 Sep 2022 08:05:55,214 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-021-0.sql 
+08 Sep 2022 08:05:55,226 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-022-0.sql 
+08 Sep 2022 08:05:55,234 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-023-0.sql 
+08 Sep 2022 08:05:55,237 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-024-0.sql 
+08 Sep 2022 08:05:55,243 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-025-0.sql 
+08 Sep 2022 08:05:55,245 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-026-0.sql 
+08 Sep 2022 08:05:55,247 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-027-0.sql 
+08 Sep 2022 08:05:55,248 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+08 Sep 2022 08:05:55,248 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 08:05:56,909 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+08 Sep 2022 08:05:56,950 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+08 Sep 2022 08:05:57,068 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+08 Sep 2022 08:05:57,072 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+08 Sep 2022 08:07:33,860 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 
+08 Sep 2022 10:12:15,741 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:60) Inbox service shutting down 
+08 Sep 2022 10:12:15,747 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+08 Sep 2022 10:16:53,170 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 10:16:54,047 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+08 Sep 2022 10:16:54,051 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+08 Sep 2022 10:16:54,051 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+08 Sep 2022 10:16:54,052 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 10:16:55,710 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+08 Sep 2022 10:16:55,754 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+08 Sep 2022 10:16:55,872 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+08 Sep 2022 10:16:55,877 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+08 Sep 2022 10:17:38,526 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 

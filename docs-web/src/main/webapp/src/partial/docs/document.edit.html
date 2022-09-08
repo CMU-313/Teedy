@@ -3,7 +3,7 @@
 <div ng-show="document || !isEdit()">
   <form name="documentForm" class="form-horizontal">
     <div class="pull-right btn-group" ng-init="form = documentForm">
-      <button type="submit" class="btn btn-primary" ng-disabled="!documentForm.$valid || fileIsUploading" ng-click="edit()">
+      <button type="submit" class="btn btn-primary" ng-disabled="!documentForm.$valid || fileIsUploading" ng-click="edit()" aria-label = "submit button">
         <span class="fas fa-save"></span>
         {{ 'save' | translate }}
       </button>
@@ -98,7 +98,7 @@
                    ng-model="meta.value" datepicker-options="{ startingDay: 1, showWeeks: false }"
                    is-open="datepickerOpenedMeta[meta.id]" ng-disabled="fileIsUploading" />
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" ng-click="datepickerOpenedMeta[meta.id] = true" ng-disabled="fileIsUploading"><i class="fas fa-calendar"></i></button>
+              <button type="button" class="btn btn-default" ng-click="datepickerOpenedMeta[meta.id] = true" ng-disabled="fileIsUploading" aria-label = "date button"><i class="fas fa-calendar"></i></button>
             </span>
           </div>
 
@@ -199,11 +199,11 @@
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary" ng-disabled="!documentForm.$valid || fileIsUploading" ng-click="edit()">
+        <button type="submit" class="btn btn-primary" ng-disabled="!documentForm.$valid || fileIsUploading" ng-click="edit()" aria-label = "submit button">
           <span class="fas fa-save"></span>
           {{ 'save' | translate }}
         </button>
-        <button type="submit" class="btn btn-default" ng-click="cancel()" ng-disabled="fileIsUploading">{{ 'cancel' | translate }}</button>
+        <button type="submit" class="btn btn-default" ng-click="cancel()" ng-disabled="fileIsUploading" aria-label = "submit button">{{ 'cancel' | translate }}</button>
       </div>
     </div>
   </form>

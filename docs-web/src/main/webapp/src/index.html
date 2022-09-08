@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="docs">
+<html ng-app="docs" lang="en">
   <head>
     <title ng-bind-template="{{ pageTitle ? pageTitle : appName }}">Teedy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -116,10 +116,11 @@
 
     <nav class="navbar navbar-default" role="navigation" ng-controller="Navigation">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" aria-label="Left Align"
+        <button type="button" class="navbar-toggle" 
                 ng-init="isCollapsed = true"
-                ng-click="isCollapsed = !isCollapsed">
-          <span class="sr-only" aria-hidden="true">{{ 'index.toggle_navigation' | translate }}</span>
+                ng-click="isCollapsed = !isCollapsed"
+                aria-label="Left Align">
+          <span class="sr-only">{{ 'index.toggle_navigation' | translate }}</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>

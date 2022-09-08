@@ -188,6 +188,8 @@
                 <systemProperty>
                   <name>application.mode</name>
                   <value>dev</value>
+                  <name>docs.home</name>
+                  <value>/home/yiqunz/teedy/docs</value>
                 </systemProperty>
               </systemProperties>
               <webApp>

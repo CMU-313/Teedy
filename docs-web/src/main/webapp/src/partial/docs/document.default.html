@@ -21,7 +21,7 @@
         </a>
         <div class="file-info">
           <div class="v-align">
-            <button class="btn btn-danger" ng-click="deleteFile($event, file)"><span class="fas fa-trash"></span></button>
+            <button aria-label = "delete-file" class="btn btn-danger" ng-click="deleteFile($event, file)"><span class="fas fa-trash"></span></button>
           </div>
           <div class="v-align file-name" ng-if="file.name">{{ file.name }}</div>
           <div class="v-align">

@@ -116,10 +116,10 @@
 
     <nav class="navbar navbar-default" role="navigation" ng-controller="Navigation">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle"
+        <button type="button" class="navbar-toggle" aria-label="Left Align"
                 ng-init="isCollapsed = true"
                 ng-click="isCollapsed = !isCollapsed">
-          <span class="sr-only">{{ 'index.toggle_navigation' | translate }}</span>
+          <span class="sr-only" aria-hidden="true">{{ 'index.toggle_navigation' | translate }}</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>

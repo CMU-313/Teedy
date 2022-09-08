@@ -15,7 +15,7 @@
     <label for="inputRouteModel" class="col-sm-3">
       {{ 'document.view.workflow.workflow_start_label' | translate }}
       <p ng-if="userInfo.base_functions.indexOf('ADMIN') != -1">
-        <a href="#/settings/workflow">{{ 'document.view.workflow.add_more_workflow' | translate }}</a>
+        <a href="http://localhost:8080/src/#/settings/workflow">{{ 'document.view.workflow.add_more_workflow' | translate }}</a>
       </p>
     </label>
     <div class="col-sm-6">
@@ -69,7 +69,7 @@
           {{ 'workflow_transition.' + step.transition | translate }}
           {{ step.end_date | timeAgo: dateTimeFormat }}
           by
-        <a href="#/user/{{ step.validator_username }}" class="label label-default">{{ step.validator_username }}</a>
+        <a href="http://localhost:8080/src/#/user/{{ step.validator_username }}" class="label label-default">{{ step.validator_username }}</a>
         <span ng-show="step.comment" class="text-">
           <br/><em>{{ step.comment }}</em>
         </span>

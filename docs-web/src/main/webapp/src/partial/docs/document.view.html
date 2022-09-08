@@ -16,7 +16,7 @@
 <div ng-show="document">
   <div class="pull-right btn-group">
     <button class="btn btn-danger" ng-show="document.writable" ng-click="deleteDocument(document)"><span class="fas fa-trash"></span> {{ 'delete' | translate }}</button>
-    <a href="#/document/edit/{{ document.id }}" ng-show="document.writable" class="btn btn-primary"><span class="fas fa-pencil-alt"></span> {{ 'edit' | translate }}</a>
+    <a href="http://localhost:8080/src/#/document/edit/{{ document.id }}" ng-show="document.writable" class="btn btn-primary"><span class="fas fa-pencil-alt"></span> {{ 'edit' | translate }}</a>
   </div>
 
   <div class="pull-right dropdown" uib-dropdown>
@@ -33,7 +33,7 @@
         </a>
       </li>
       <li>
-        <a href ng-click="exportPdf()">
+        <a href="http://localhost:8080/src/" ng-click="exportPdf()">
           <span class="fas fa-file-pdf"></span>
           {{ 'document.view.export_pdf' | translate }}
         </a>
@@ -46,7 +46,7 @@
 	  <h1>
       {{ document.title }}
       <small uib-tooltip="{{ 'document.last_updated' | translate: { date: document.update_date } }}">{{ document.create_date | date: dateFormat }}
-      {{ 'document.view.by_creator' | translate }} <a href="#/user/{{ document.creator }}">{{ document.creator }}</a></small>
+      {{ 'document.view.by_creator' | translate }} <a href="http://localhost:8080/src/#/user/{{ document.creator }}">{{ document.creator }}</a></small>
     </h1>
 
 	  <p ng-show="document.writable">
@@ -72,22 +72,22 @@
     <div class="col-md-9">
       <ul class="nav nav-tabs">
         <li ng-class="{ active: $state.current.name == 'document.view.content' }">
-          <a href="#/document/view/{{ document.id }}/content">
+          <a href="http://localhost:8080/src/#/document/view/{{ document.id }}/content">
             <span class="fas fa-file"></span> {{ 'document.view.content' | translate }}
           </a>
         </li>
         <li ng-class="{ active: $state.current.name == 'document.view.workflow' }">
-          <a href="#/document/view/{{ document.id }}/workflow">
+          <a href="http://localhost:8080/src/#/document/view/{{ document.id }}/workflow">
             <span class="fas fa-random"></span> {{ 'document.view.workflow' | translate }}
           </a>
         </li>
         <li ng-class="{ active: $state.current.name == 'document.view.permissions' }">
-          <a href="#/document/view/{{ document.id }}/permissions">
+          <a href="http://localhost:8080/src/#/document/view/{{ document.id }}/permissions">
             <span class="fas fa-user"></span> {{ 'document.view.permissions' | translate }}
           </a>
         </li>
         <li ng-class="{ active: $state.current.name == 'document.view.activity' }">
-          <a href="#/document/view/{{ document.id }}/activity">
+          <a href="http://localhost:8080/src/#/document/view/{{ document.id }}/activity">
             <span class="fas fa-tasks"></span> {{ 'document.view.activity' | translate }}
           </a>
         </li>

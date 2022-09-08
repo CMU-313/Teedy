@@ -26,13 +26,22 @@
       <tbody>
         <tr class="info">
           <td>
+            <label>
+            {{'settings.vocabulary.value' | translate}}
             <input type="text" ng-attr-placeholder="{{ 'settings.vocabulary.new_entry' | translate }}" class="form-control" ng-model="entry.value" maxlength="500" />
+            </label>
           </td>
           <td>
+            <label>
+            {{'settings.vocabulary.order' | translate}}
             <input type="number" class="form-control" ng-model="entry.order" />
+            </label>
           </td>
           <td>
+            <label>
+              {{'settings.vocabulary.new_entry' | translate}}
             <span ng-click="addEntry(entry)" class="fas fa-plus pointer"></span>
+            </label>
           </td>
         </tr>
         <tr>
@@ -40,13 +49,23 @@
         </tr>
         <tr ng-repeat="entry in entries | orderBy: 'order'">
           <td>
+            <label>
+            {{'settings.vocabulary.value' | translate}}
             <input type="text" class="form-control" ng-model="entry.value" maxlength="500" ng-blur="updateEntry(entry)" />
+            </label>
+
           </td>
           <td>
+            <label>
+            {{'settings.vocabulary.order' | translate}}
             <input type="number" class="form-control" ng-model="entry.order" ng-blur="updateEntry(entry)" />
+            </label>
           </td>
           <td>
+            <label>
+            {{'settings.vocabulary.new_entry' | translate}}
             <span ng-click="deleteEntry(entry)" class="fas fa-trash pointer"></span>
+            </label>
           </td>
         </tr>
       </tbody>

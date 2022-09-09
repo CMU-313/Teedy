@@ -162,7 +162,7 @@
 
       <!-- Navigation breadcrumb -->
       <ol class="breadcrumb breadcrumb-navigation pull-left mt-10">
-        <li><a href ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
+        <li><a href ng-click="navigateToTag()" class="home-button"><span class="fas fa-home"> Home</span></a></li>
         <li ng-repeat="tag in getCurrentNavigation()" ng-class="{ active: tag.id == navigatedTag.id }">
           <a class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id != navigatedTag.id" href ng-click="navigateToTag(tag)">{{ tag.name }}</a>
           <span class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id == navigatedTag.id">{{ tag.name }}</span>
@@ -212,7 +212,7 @@
       </div>
 
       <div class="clearfix"></div>
-
+      
       <!-- Current folder -->
       <table class="row table table-hover table-navigation" ng-show="navigationEnabled">
         <tr ng-repeat="tag in tags | filter: navigatedFilter: navigatedComparator | orderBy: '+name'" ng-click="navigateToTag(tag)">
@@ -253,7 +253,7 @@
             {{ document.title }} ({{ document.file_count }})
             <span class="fas fa-share" ng-if="document.shared" uib-tooltip="{{ 'document.shared' | translate }}"></span>
             <span class="fas fa-random" ng-if="document.active_route" uib-tooltip="{{ document.current_step_name }}"></span>
-            <a href="#/document/view/{{ document.id }}" target="_blank" ng-click="$event.stopPropagation()"><span class="fas fa-link"></span></a>
+            <a class="link-button" alt="Link a tag" href="#/document/view/{{ document.id }}" target="_blank" ng-click="$event.stopPropagation()"><span class="fas fa-link"> Link to Document</span></a>
 
             <div class="pull-right text-muted small" uib-tooltip="{{ 'document.last_updated' | translate: { date: document.update_date } }}">
               {{ document.create_date | timeAgo: dateFormat }}

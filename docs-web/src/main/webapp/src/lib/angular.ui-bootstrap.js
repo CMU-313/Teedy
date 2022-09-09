@@ -106,8 +106,8 @@ angular.module('ui.bootstrap.collapse', [])
                 // prevents the animation from jumping to collapsed state
                 .removeClass('collapse')
                 .addClass('collapsing')
-                .attr('aria-expanded', false)
-                .attr('aria-hidden', true);
+                .attr('aria-expanded', false);
+                // .attr('aria-hidden', true);
 
               if ($animateCss) {
                 $animateCss(element, {

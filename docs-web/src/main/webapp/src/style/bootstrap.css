@@ -526,7 +526,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: #333;
 }
 .text-primary {
   color: #337ab7;
@@ -3897,7 +3897,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #777;
+  color: #333;
   cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;

@@ -4,14 +4,14 @@
       <!-- Main new document button -->
       <div class="text-center mb-19">
         <div class="btn-group" uib-dropdown id="document-add-btn">
-          <a href="#/document/add" class="btn btn-primary">
+          <a href="http://localhost:8080/src/#/document/add" class="btn btn-primary">
             <span class="fas fa-plus"></span> {{ 'document.add_document' | translate }}
           </a>
           <button type="button" class="btn btn-primary" uib-dropdown-toggle>
             <span class="caret"></span>
           </button>
           <ul uib-dropdown-menu>
-            <li><a href ngf-select="importEml($file)">{{ 'document.import_eml' | translate }}</a></li>
+            <li><a href="http://localhost:8080/src/" ngf-select="importEml($file)">{{ 'document.import_eml' | translate }}</a></li>
           </ul>
         </div>
       </div>
@@ -162,9 +162,9 @@
 
       <!-- Navigation breadcrumb -->
       <ol class="breadcrumb breadcrumb-navigation pull-left mt-10">
-        <li><a href ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
+        <li><a href="http://localhost:8080/src/" ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
         <li ng-repeat="tag in getCurrentNavigation()" ng-class="{ active: tag.id == navigatedTag.id }">
-          <a class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id != navigatedTag.id" href ng-click="navigateToTag(tag)">{{ tag.name }}</a>
+          <a href="http://localhost:8080/src/" class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id != navigatedTag.id" href ng-click="navigateToTag(tag)">{{ tag.name }}</a>
           <span class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id == navigatedTag.id">{{ tag.name }}</span>
         </li>
       </ol>
@@ -253,7 +253,7 @@
             {{ document.title }} ({{ document.file_count }})
             <span class="fas fa-share" ng-if="document.shared" uib-tooltip="{{ 'document.shared' | translate }}"></span>
             <span class="fas fa-random" ng-if="document.active_route" uib-tooltip="{{ document.current_step_name }}"></span>
-            <a href="#/document/view/{{ document.id }}" target="_blank" ng-click="$event.stopPropagation()"><span class="fas fa-link"></span></a>
+            <a href="http://localhost:8080/src/#/document/view/{{ document.id }}" target="_blank" ng-click="$event.stopPropagation()"><span class="fas fa-link"></span></a>
 
             <div class="pull-right text-muted small" uib-tooltip="{{ 'document.last_updated' | translate: { date: document.update_date } }}">
               {{ document.create_date | timeAgo: dateFormat }}
@@ -285,7 +285,7 @@
         <div class="col-md-12 row">
           <div ng-repeat-start="document in documents" class="col-md-4">
             <div class="thumbnail" ng-class="{ active: $stateParams.id == document.id }">
-              <a href="#/document/view/{{ document.id }}" class="file-thumbnail">
+              <a href="http://localhost:8080/src/#/document/view/{{ document.id }}" class="file-thumbnail">
                 <img class="img-responsive" ng-if="document.file_id" ng-src="../api/file/{{ document.file_id }}/data?size=thumb" />
               </a>
 

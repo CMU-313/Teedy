@@ -15,6 +15,9 @@ import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+// https://docs.oracle.com/javaee/7/api/javax/ws/rs/ForbiddenException.html
+import javax.ws.rs.ForbiddenException;
+
 
 /**
  * Test the app resource.
@@ -333,6 +336,74 @@ public class TestAppResource extends BaseJerseyTest {
         Assert.assertEquals(0, lastSync.getJsonNumber("count").intValue());
 
         greenMail.stop();
+    }
+
+    // Test exception for unauthenticated user for application logs
+    // learned about expected parameter from https://www.baeldung.com/junit-assert-exception
+    @Test(expected = ForbiddenException.class)
+    public void testLoggedOutLogs() {
+        String adminToken = clientUtil.login("admin", "admin", false);
+        clientUtil.logout(adminToken);
+
+        // attempt to gain access with bad token
+        JsonObject json = target().path("/app/log")
+                .queryParam("level", "DEBUG")
+                .request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .get(JsonObject.class);
+    }
+
+    // Test exception for unauthenticated user for config smtp
+    // learned about expected parameter from https://www.baeldung.com/junit-assert-exception
+    @Test(expected = ForbiddenException.class)
+    public void testLoggedOutConfigSMTP() {
+        String adminToken = clientUtil.login("admin", "admin", false);
+        clientUtil.logout(adminToken);
+
+        // attempt to gain access with bad token
+        JsonObject json = target().path("/app/config_smtp").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .get(JsonObject.class);
+    }
+
+    // Test exception for unauthenticated user for guest login
+    // learned about expected parameter from https://www.baeldung.com/junit-assert-exception
+    @Test(expected = ForbiddenException.class)
+    public void testLoggedOutGuestLogin() {
+        String adminToken = clientUtil.login("admin", "admin", false);
+        clientUtil.logout(adminToken);
+
+        // attempt to gain access with bad token
+        JsonObject json = target().path("/app/guest_login").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .post(Entity.form(new Form()
+                .param("enabled", "true")), JsonObject.class);
+    }
+
+    // Test exception for unauthenticated user for inbox config
+    // learned about expected parameter from https://www.baeldung.com/junit-assert-exception
+    @Test(expected = ForbiddenException.class)
+    public void testLoggedOutInboxConfig() {
+        String adminToken = clientUtil.login("admin", "admin", false);
+        clientUtil.logout(adminToken);
+
+        // attempt to gain access with bad token
+        JsonObject json = target().path("/app/config_inbox").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .get(JsonObject.class);
+    }
+
+    // Test exception for unauthenticated user for inbox config
+    // learned about expected parameter from https://www.baeldung.com/junit-assert-exception
+    @Test(expected = ForbiddenException.class)
+    public void testLoggedOutTestInbox() {
+        String adminToken = clientUtil.login("admin", "admin", false);
+        clientUtil.logout(adminToken);
+
+        // attempt to gain access with bad token
+        JsonObject json = target().path("/app/test_inbox").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .post(Entity.form(new Form()), JsonObject.class);
     }
 
     /**

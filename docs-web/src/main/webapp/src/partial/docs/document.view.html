@@ -15,12 +15,12 @@
 
 <div ng-show="document">
   <div class="pull-right btn-group">
-    <button class="btn btn-danger" ng-show="document.writable" ng-click="deleteDocument(document)"><span class="fas fa-trash"></span> {{ 'delete' | translate }}</button>
+    <button class="btn btn-danger" ng-show="document.writable" ng-click="deleteDocument(document)" aria-label = delete document button"><span class="fas fa-trash"></span> {{ 'delete' | translate }}</button>
     <a href="#/document/edit/{{ document.id }}" ng-show="document.writable" class="btn btn-primary"><span class="fas fa-pencil-alt"></span> {{ 'edit' | translate }}</a>
   </div>
 
   <div class="pull-right dropdown" uib-dropdown>
-    <button class="btn btn-default" uib-dropdown-toggle>
+    <button class="btn btn-default" uib-dropdown-toggle aria-label = "dropdown toggle">
       <span class="fas fa-cloud-download-alt"></span>
       {{ 'export' | translate }}
       <span class="caret"></span>
@@ -50,12 +50,12 @@
     </h1>
 
 	  <p ng-show="document.writable">
-	    <button class="btn btn-sm btn-info" ng-click="share()" ng-show="userInfo.username != 'guest'">
+	    <button class="btn btn-sm btn-info" ng-click="share()" ng-show="userInfo.username != 'guest'" aria-label = "user info button">
         <span class="fas fa-share"></span> {{ 'share' | translate }}
       </button>
 
       <span ng-repeat="share in document.acls | filter: { 'type': 'SHARE' }">
-        <button class="btn btn-default btn-sm" ng-click="showShare(share)">
+        <button class="btn btn-default btn-sm" ng-click="showShare(share)" aria-label = "share button">
           <span class="fas fa-check"></span> {{ share.name ? share.name : 'shared' }}
         </button>
       </span>

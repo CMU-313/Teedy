@@ -526,7 +526,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: rgb(70, 69, 69);
 }
 .text-primary {
   color: #337ab7;

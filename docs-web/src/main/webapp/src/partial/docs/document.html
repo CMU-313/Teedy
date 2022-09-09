@@ -162,7 +162,7 @@
 
       <!-- Navigation breadcrumb -->
       <ol class="breadcrumb breadcrumb-navigation pull-left mt-10">
-        <li><a href ng-click="navigateToTag()"><span class="fas fa-home"></span></a></li>
+        <li><a href ng-click="navigateToTag()"><span class="fas fa-home"></span> Home</a></li>
         <li ng-repeat="tag in getCurrentNavigation()" ng-class="{ active: tag.id == navigatedTag.id }">
           <a class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id != navigatedTag.id" href ng-click="navigateToTag(tag)">{{ tag.name }}</a>
           <span class="label" ng-style="{ 'background-color': tag.color }" ng-if="tag.id == navigatedTag.id">{{ tag.name }}</span>

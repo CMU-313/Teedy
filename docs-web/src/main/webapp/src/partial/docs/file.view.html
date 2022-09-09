@@ -48,9 +48,8 @@
     <video ng-if="videoPlayer" autoplay="autoplay" loop="loop"
            controls="controls" ng-src="../api/file/{{ $stateParams.fileId }}/data"></video>
   </a>
-
   <!-- PDF viewer -->
-  <iframe ng-src="{{ trustedFileUrl }}" class="pdf-viewer" scrolling="yes" ng-if="!error && file.mimetype == 'application/pdf'"></iframe>
+  <iframe ng-src="{{ trustedFileUrl }}" class="pdf-viewer" scrolling="yes" ng-if="!error && file.mimetype == 'application/pdf'" title="PDF viewer"></iframe>
 
   <!-- File not found -->
   <p class="well-lg" ng-show="error">

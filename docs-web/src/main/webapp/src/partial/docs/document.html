@@ -9,6 +9,7 @@
           </a>
           <button type="button" class="btn btn-primary" uib-dropdown-toggle>
             <span class="caret"></span>
+          Import from Email
           </button>
           <ul uib-dropdown-menu>
             <li><a href ngf-select="importEml($file)">{{ 'document.import_eml' | translate }}</a></li>
@@ -146,8 +147,9 @@
                   </div>
 
                   <div class="form-group text-center">
-                    <button type="submit" ng-click="startSearch()" class="btn btn-primary">
-                      <span class="fas fa-search"></span> {{ 'document.search' | translate }}
+                    <button  type="submit" ng-click="startSearch()" aria-label="Search Submit Button" class="btn btn-primary">
+                      <span class="fas fa-search"></span> {{ 'document.search' | translate 
+                       }}
                     </button>
                     <button class="btn" ng-click="clearSearch()">
                       {{ 'document.search_clear' | translate }}
@@ -199,6 +201,7 @@
                 uib-tooltip="{{ 'document.toggle_navigation' | translate }}"
                 tooltip-append-to-body="true">
           <span class="far" ng-class="{ 'fa-folder-open': navigationEnabled, 'fa-folder': !navigationEnabled }"></span>
+        Toggle Folder Navigation 
         </button>
         <!-- Add a tag here -->
         <button class="btn btn-primary btn-add-tag"
@@ -208,6 +211,7 @@
             <i class="fas fa-tag"></i>
             <i class="fas fa-plus"></i>
           </span>
+          New Tag
         </button>
       </div>
 

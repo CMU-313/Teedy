@@ -189,6 +189,10 @@
                   <name>application.mode</name>
                   <value>dev</value>
                 </systemProperty>
+                <systemProperty>
+                  <name>docs.home</name>
+                  <value>../data/docs</value>
+                </systemProperty>
               </systemProperties>
               <webApp>
                 <contextPath>/</contextPath>

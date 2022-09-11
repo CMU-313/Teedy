@@ -1,0 +1,290 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.sismics.docs:docs-web[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Docs Web 1.10[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mjetty-maven-plugin:9.4.36.v20210114:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mdocs-web[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mdocs-web[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 5 resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mdocs-web[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mdocs-web[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 13 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mdocs-web[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mjetty-maven-plugin:9.4.36.v20210114:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mdocs-web[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjetty-maven-plugin:9.4.36.v20210114:run[m [1m(default-cli)[m @ [36mdocs-web[0;1m ---[m
+[[1;34mINFO[m] Logging initialized @2497ms to org.eclipse.jetty.util.log.Slf4jLog
+[[1;34mINFO[m] webAppSourceDirectory not set. Trying src/main/webapp
+[[1;34mINFO[m] Reload Mechanic: automatic
+[[1;34mINFO[m] nonBlocking:false
+[[1;34mINFO[m] Classes = /home/whuan/Teedy/docs-web/target/classes
+[[1;34mINFO[m] Configuring Jetty for project: Docs Web
+[[1;34mINFO[m] Context path = /
+[[1;34mINFO[m] Tmp directory = /home/whuan/Teedy/docs-web/target/tmp
+[[1;34mINFO[m] Web defaults = org/eclipse/jetty/webapp/webdefault.xml
+[[1;34mINFO[m] Web overrides = src/dev/main/webapp/web-override.xml
+[[1;34mINFO[m] web.xml file = file:///home/whuan/Teedy/docs-web/src/main/webapp/WEB-INF/web.xml
+[[1;34mINFO[m] Webapp directory = /home/whuan/Teedy/docs-web/src/main/webapp
+[[1;34mINFO[m] jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 11.0.16+8-post-Ubuntu-0ubuntu122.04
+[[1;34mINFO[m] Scanning elapsed time=57ms
+[[1;34mINFO[m] DefaultSessionIdManager workerName=node0
+[[1;34mINFO[m] No SessionScavenger set, using defaults
+[[1;34mINFO[m] node0 Scavenging every 660000ms
+31 Aug 2022 19:29:10,908 ERROR com.sismics.util.filter.RequestContextFilter.init(RequestContextFilter.java:46) Error initializing base data directory 
+java.lang.RuntimeException: java.nio.file.AccessDeniedException: /var/docs
+	at com.sismics.docs.core.util.DirectoryUtil.getBaseDataDirectory(DirectoryUtil.java:46)
+	at com.sismics.util.filter.RequestContextFilter.init(RequestContextFilter.java:43)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:140)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:731)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:755)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:379)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1457)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:328)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1422)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:911)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:288)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:524)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:397)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:423)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:387)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:449)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:310)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:150)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: java.nio.file.AccessDeniedException: /var/docs
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:389)
+	at java.base/java.nio.file.Files.createDirectory(Files.java:690)
+	at java.base/java.nio.file.Files.createAndCheckIsDirectory(Files.java:797)
+	at java.base/java.nio.file.Files.createDirectories(Files.java:783)
+	at com.sismics.docs.core.util.DirectoryUtil.getBaseDataDirectory(DirectoryUtil.java:44)
+	... 55 more
+[[1;33mWARNING[m] Failed startup of context o.e.j.m.p.JettyWebAppContext@6968c1d6{Teedy,/,file:///home/whuan/Teedy/docs-web/src/main/webapp/,UNAVAILABLE}{file:///home/whuan/Teedy/docs-web/src/main/webapp/}
+[1;31mjava.lang.RuntimeException[m: [1;31mjava.nio.file.AccessDeniedException: /var/docs[m
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getBaseDataDirectory ([1mDirectoryUtil.java:46[m)
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getDataSubDirectory ([1mDirectoryUtil.java:104[m)
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getLogDirectory ([1mDirectoryUtil.java:86[m)
+    [1mat[m com.sismics.util.filter.RequestContextFilter.init ([1mRequestContextFilter.java:53[m)
+    [1mat[m org.eclipse.jetty.servlet.FilterHolder.initialize ([1mFilterHolder.java:140[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0 ([1mServletHandler.java:731[m)
+    [1mat[m java.util.Spliterators$ArraySpliterator.forEachRemaining ([1mSpliterators.java:948[m)
+    [1mat[m java.util.stream.Streams$ConcatSpliterator.forEachRemaining ([1mStreams.java:734[m)
+    [1mat[m java.util.stream.ReferencePipeline$Head.forEach ([1mReferencePipeline.java:658[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletHandler.initialize ([1mServletHandler.java:755[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletContextHandler.startContext ([1mServletContextHandler.java:379[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.startWebapp ([1mWebAppContext.java:1457[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp ([1mJettyWebAppContext.java:328[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.startContext ([1mWebAppContext.java:1422[m)
+    [1mat[m org.eclipse.jetty.server.handler.ContextHandler.doStart ([1mContextHandler.java:911[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletContextHandler.doStart ([1mServletContextHandler.java:288[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.doStart ([1mWebAppContext.java:524[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart ([1mJettyWebAppContext.java:397[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:117[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:117[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.server.Server.start ([1mServer.java:423[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:110[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.server.Server.doStart ([1mServer.java:387[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty ([1mAbstractJettyMojo.java:449[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute ([1mAbstractJettyMojo.java:310[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyRunMojo.execute ([1mJettyRunMojo.java:150[m)
+    [1mat[m org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo ([1mDefaultBuildPluginManager.java:137[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:210[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:957[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:289[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:193[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:566[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[1mCaused by[m: java.nio.file.AccessDeniedException: [1;31m/var/docs[m
+    [1mat[m sun.nio.fs.UnixException.translateToIOException ([1mUnixException.java:90[m)
+    [1mat[m sun.nio.fs.UnixException.rethrowAsIOException ([1mUnixException.java:111[m)
+    [1mat[m sun.nio.fs.UnixException.rethrowAsIOException ([1mUnixException.java:116[m)
+    [1mat[m sun.nio.fs.UnixFileSystemProvider.createDirectory ([1mUnixFileSystemProvider.java:389[m)
+    [1mat[m java.nio.file.Files.createDirectory ([1mFiles.java:690[m)
+    [1mat[m java.nio.file.Files.createAndCheckIsDirectory ([1mFiles.java:797[m)
+    [1mat[m java.nio.file.Files.createDirectories ([1mFiles.java:783[m)
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getBaseDataDirectory ([1mDirectoryUtil.java:44[m)
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getDataSubDirectory ([1mDirectoryUtil.java:104[m)
+    [1mat[m com.sismics.docs.core.util.DirectoryUtil.getLogDirectory ([1mDirectoryUtil.java:86[m)
+    [1mat[m com.sismics.util.filter.RequestContextFilter.init ([1mRequestContextFilter.java:53[m)
+    [1mat[m org.eclipse.jetty.servlet.FilterHolder.initialize ([1mFilterHolder.java:140[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0 ([1mServletHandler.java:731[m)
+    [1mat[m java.util.Spliterators$ArraySpliterator.forEachRemaining ([1mSpliterators.java:948[m)
+    [1mat[m java.util.stream.Streams$ConcatSpliterator.forEachRemaining ([1mStreams.java:734[m)
+    [1mat[m java.util.stream.ReferencePipeline$Head.forEach ([1mReferencePipeline.java:658[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletHandler.initialize ([1mServletHandler.java:755[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletContextHandler.startContext ([1mServletContextHandler.java:379[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.startWebapp ([1mWebAppContext.java:1457[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp ([1mJettyWebAppContext.java:328[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.startContext ([1mWebAppContext.java:1422[m)
+    [1mat[m org.eclipse.jetty.server.handler.ContextHandler.doStart ([1mContextHandler.java:911[m)
+    [1mat[m org.eclipse.jetty.servlet.ServletContextHandler.doStart ([1mServletContextHandler.java:288[m)
+    [1mat[m org.eclipse.jetty.webapp.WebAppContext.doStart ([1mWebAppContext.java:524[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart ([1mJettyWebAppContext.java:397[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:117[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:117[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.start ([1mContainerLifeCycle.java:169[m)
+    [1mat[m org.eclipse.jetty.server.Server.start ([1mServer.java:423[m)
+    [1mat[m org.eclipse.jetty.util.component.ContainerLifeCycle.doStart ([1mContainerLifeCycle.java:110[m)
+    [1mat[m org.eclipse.jetty.server.handler.AbstractHandler.doStart ([1mAbstractHandler.java:97[m)
+    [1mat[m org.eclipse.jetty.server.Server.doStart ([1mServer.java:387[m)
+    [1mat[m org.eclipse.jetty.util.component.AbstractLifeCycle.start ([1mAbstractLifeCycle.java:73[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty ([1mAbstractJettyMojo.java:449[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute ([1mAbstractJettyMojo.java:310[m)
+    [1mat[m org.eclipse.jetty.maven.plugin.JettyRunMojo.execute ([1mJettyRunMojo.java:150[m)
+    [1mat[m org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo ([1mDefaultBuildPluginManager.java:137[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:210[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:957[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:289[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:193[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:566[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[[1;34mINFO[m] Started ServerConnector@24010875{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[[1;34mINFO[m] Started @5027ms
+[[1;34mINFO[m] Started Jetty Server
+[[1;34mINFO[m] Stopped ServerConnector@24010875{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[[1;34mINFO[m] node0 Stopped scavenging
+31 Aug 2022 19:29:17,291 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+31 Aug 2022 19:29:17,308 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+31 Aug 2022 19:29:17,418 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+31 Aug 2022 19:29:17,423 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+31 Aug 2022 19:29:17,429 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.lowagie.text.pdf.MappedRandomAccessFile$1 (file:/home/whuan/.m2/repository/com/lowagie/itext/2.1.7/itext-2.1.7.jar) to method java.nio.DirectByteBuffer.cleaner()
+WARNING: Please consider reporting this to the maintainers of com.lowagie.text.pdf.MappedRandomAccessFile$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+31 Aug 2022 19:29:18,255 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+31 Aug 2022 19:29:18,261 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+31 Aug 2022 19:29:18,261 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+31 Aug 2022 19:29:18,262 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+31 Aug 2022 19:29:19,687 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:60) Inbox service shutting down 
+31 Aug 2022 19:29:19,688 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.pnm.PNMImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.twelvemonkeys.imageio.plugins.tiff.BigTIFFImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.twelvemonkeys.imageio.plugins.tiff.TIFFImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.wbmp.WBMPImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.tiff.TIFFImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.raw.RawImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.levigo.jbig2.JBIG2ImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.bmp.BMPImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.pcx.PCXImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.twelvemonkeys.imageio.plugins.jpeg.JPEGImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.jpeg2000.impl.J2KImageReaderSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.stream.ChannelImageInputStreamSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.stream.ChannelImageOutputStreamSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.pcx.PCXImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.gif.GIFImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.twelvemonkeys.imageio.plugins.jpeg.JPEGImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.jpeg2000.impl.J2KImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.pnm.PNMImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.wbmp.WBMPImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.raw.RawImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.twelvemonkeys.imageio.plugins.tiff.TIFFImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.bmp.BMPImageWriterSpi
+[[1;34mINFO[m] Unregistered locally installed provider class: class com.github.jaiimageio.impl.plugins.tiff.TIFFImageWriterSpi
+[[1;34mINFO[m] Stopped o.e.j.m.p.JettyWebAppContext@6968c1d6{Teedy,/,file:///home/whuan/Teedy/docs-web/src/main/webapp/,STOPPED}{file:///home/whuan/Teedy/docs-web/src/main/webapp/}
+[[1;34mINFO[m] Jetty server exiting.
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  11.563 s
+[[1;34mINFO[m]

@@ -57,6 +57,7 @@
     "search_clear": "Leeren",
     "any_language": "Jede Sprache",
     "add_document": "Dokument hinzufügen",
+    "more_options": "Mehr Optionen",
     "import_eml": "Import aus einer E-Mail (EML-Format)",
     "tags": "Tags",
     "no_tags": "Keine Tags",
@@ -107,6 +108,7 @@
       "workflow_comment": "Fügen Sie einen Workflow-Kommentar hinzu",
       "workflow_validated_title": "Workflow-Schritt validiert",
       "workflow_validated_message": "Der Workflow-Schritt wurde erfolgreich validiert.",
+      "actions": "Aktionen",
       "display_mode_list": "Dateien in Liste anzeigen",
       "display_mode_grid": "Dateien im Raster anzeigen",
       "content": {

@@ -49,6 +49,7 @@
     "search_clear": "清除",
     "any_language": "所有语言",
     "add_document": "添加一个文档",
+    "more_options": "更多选择",
     "import_eml": "从电子邮件导入（EML格式）",
     "tags": "标签",
     "no_tags": "无标签",
@@ -97,6 +98,7 @@
       "workflow_comment": "添加工作流程评论",
       "workflow_validated_title": "工作流程步骤已验证",
       "workflow_validated_message": "工作流程步骤已成功验证。",
+      "actions": "行动",
       "content": {
         "content": "内容",
         "delete_file_title": "删除文档",

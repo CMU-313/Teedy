@@ -57,6 +57,7 @@
     "search_clear": "Cancella",
     "any_language": "Qualunque lingua",
     "add_document": "Aggiungi un documento",
+    "more_options": "Più opzioni",
     "import_eml": "Importa da email (formato EML)",
     "tags": "Tag",
     "no_tags": "Nessun tag",
@@ -107,6 +108,7 @@
       "workflow_comment": "Aggiungi un commento al flusso di lavoro",
       "workflow_validated_title": "Passo nel flusso di lavoro validato",
       "workflow_validated_message": "Il passo nel flusso di lavoro è stato correttamente validato.",
+      "actions": "Azioni",
       "content": {
         "content": "Contenuto",
         "delete_file_title": "Cancella file",

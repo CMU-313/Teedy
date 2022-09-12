@@ -49,6 +49,7 @@
     "search_clear": "Очистить",
     "any_language": "Любой язык",
     "add_document": "Добавить документ",
+    "more_options": "Больше опций",
     "import_eml": "Импорт из электронной почты (формат EML)",
     "tags": "Теги",
     "no_tags": "Нет тегов",
@@ -97,6 +98,7 @@
       "workflow_comment": "Добавить комментарий рабочего процесса",
       "workflow_validated_title": "Шаблон рабочего процесса проверен",
       "workflow_validated_message": "Шаг рабочего процесса был успешно проверен.",
+      "actions": "Действия",
       "content": {
         "content": "Содержание",
         "delete_file_title": "Удалить файл",

@@ -26,10 +26,10 @@
       <tbody>
         <tr class="info">
           <td>
-            <input type="text" ng-attr-placeholder="{{ 'settings.vocabulary.new_entry' | translate }}" class="form-control" ng-model="entry.value" maxlength="500" />
+              <input type="text" ng-attr-placeholder="{{ 'settings.vocabulary.new_entry' | translate }}" class="form-control" ng-model="entry.value" maxlength="500" />
           </td>
           <td>
-            <input type="number" class="form-control" ng-model="entry.order" />
+            <input type="number" ng-attr-placeholder="{{ 'settings.vocabulary.order' | translate }}" class="form-control" ng-model="entry.order"/>
           </td>
           <td>
             <span ng-click="addEntry(entry)" class="fas fa-plus pointer"></span>
@@ -40,10 +40,10 @@
         </tr>
         <tr ng-repeat="entry in entries | orderBy: 'order'">
           <td>
-            <input type="text" class="form-control" ng-model="entry.value" maxlength="500" ng-blur="updateEntry(entry)" />
+            <input type="text" class="form-control" ng-model="entry.value" maxlength="500" ng-blur="updateEntry(entry)" aria-label="entry.value"/>
           </td>
           <td>
-            <input type="number" class="form-control" ng-model="entry.order" ng-blur="updateEntry(entry)" />
+            <input type="number" class="form-control" ng-model="entry.order" ng-blur="updateEntry(entry)" aria-label="entry.order"/>
           </td>
           <td>
             <span ng-click="deleteEntry(entry)" class="fas fa-trash pointer"></span>

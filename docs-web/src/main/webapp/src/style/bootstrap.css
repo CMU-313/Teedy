@@ -280,7 +280,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: rgb(0, 0, 0);
   background-color: #fff;
 }
 input,
@@ -623,6 +623,7 @@ ol ol {
   padding-left: 0;
   margin-left: -5px;
   list-style: none;
+  color: rgb(0, 0, 0);
 }
 .list-inline > li {
   display: inline-block;
@@ -2466,8 +2467,8 @@ fieldset[disabled] .btn-info.focus {
 }
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #774500;
+  border-color: #774500;
 }
 .btn-warning:focus,
 .btn-warning.focus {

@@ -526,7 +526,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: rgb(0, 0, 0);
 }
 .text-primary {
   color: #337ab7;
@@ -3175,7 +3175,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
-  margin-right: 2px;
+  margin-right: 10px;
   line-height: 1.42857143;
   border: 1px solid transparent;
   color: #586069;
@@ -3897,7 +3897,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #777;
+  color: #a41c1c;
   cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;

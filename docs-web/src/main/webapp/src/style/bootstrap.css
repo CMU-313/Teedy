@@ -261,8 +261,6 @@ th {
   }
 }
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 *:before,
@@ -2689,9 +2687,11 @@ tbody.collapse.in {
 .dropup,
 .dropdown {
   position: relative;
+  height: 48px;
 }
 .dropdown-toggle:focus {
   outline: 0;
+  height:48px;
 }
 .dropdown-menu {
   position: absolute;

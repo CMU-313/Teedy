@@ -227,6 +227,20 @@ public class TestUserResource extends BaseJerseyTest {
                 .cookie(TokenBasedSecurityFilter.COOKIE_NAME, aliceAuthToken)
                 .get(JsonObject.class);
         Assert.assertEquals("alice2@docs.com", json.getString("email"));
+
+        // User alice updates her information + changes her storage quota
+        json = target().path("/user/alice").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, adminToken)
+                .post(Entity.form(new Form()
+                        .param("storage_quota", "10000000")
+                        ), JsonObject.class);
+        Assert.assertEquals("ok", json.getString("status"));
+
+        // Check that the storage quota was updated
+        json = target().path("/user").request()
+                .cookie(TokenBasedSecurityFilter.COOKIE_NAME, aliceAuthToken)
+                .get(JsonObject.class);
+        Assert.assertEquals(10000000L, json.getJsonNumber("storage_quota").longValue());
         
         // Delete user alice
         target().path("/user").request()

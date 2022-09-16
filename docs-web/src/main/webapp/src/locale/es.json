@@ -218,6 +218,7 @@
   },
   "tag": {
     "new_tag": "Nueva etiqueta",
+    "hex_color": "Color hexadecimal",
     "search": "Buscar",
     "default": {
       "title": "Etiquetas",

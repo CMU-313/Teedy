@@ -188,6 +188,7 @@
   },
   "tag": {
     "new_tag": "新標籤",
+    "hex_color": "十六进制颜色",
     "search": "搜索",
     "edit_tag": "更改標籤",
     "default": {

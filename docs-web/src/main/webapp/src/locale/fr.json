@@ -218,6 +218,7 @@
   },
   "tag": {
     "new_tag": "Nouveau tag",
+    "hex_color": "Couleur hexadécimale",
     "search": "Rechercher",
     "default": {
       "title": "Tags",

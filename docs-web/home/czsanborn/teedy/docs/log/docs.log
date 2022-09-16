@@ -1,0 +1,44 @@
+04 Sep 2022 12:15:28,998 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+04 Sep 2022 12:15:30,354 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+04 Sep 2022 12:15:30,362 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+04 Sep 2022 12:15:30,362 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+04 Sep 2022 12:15:30,363 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+04 Sep 2022 12:15:33,001 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+04 Sep 2022 12:15:33,066 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+04 Sep 2022 12:15:33,310 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+04 Sep 2022 12:15:33,325 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+04 Sep 2022 12:15:59,741 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 
+05 Sep 2022 10:36:05,299 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+05 Sep 2022 10:36:06,822 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+05 Sep 2022 10:36:06,832 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+05 Sep 2022 10:36:06,832 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+05 Sep 2022 10:36:06,834 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+05 Sep 2022 10:36:10,215 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+05 Sep 2022 10:36:10,320 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+05 Sep 2022 10:36:10,588 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+05 Sep 2022 10:36:10,611 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+05 Sep 2022 11:10:06,121 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 
+08 Sep 2022 11:54:12,128 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:60) Inbox service shutting down 
+08 Sep 2022 11:54:12,195 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+08 Sep 2022 11:54:31,592 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 11:54:33,859 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+08 Sep 2022 11:54:33,868 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+08 Sep 2022 11:54:33,868 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+08 Sep 2022 11:54:33,870 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 11:54:38,047 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+08 Sep 2022 11:54:38,167 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+08 Sep 2022 11:54:38,516 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+08 Sep 2022 11:54:38,538 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+08 Sep 2022 15:20:20,463 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:60) Inbox service shutting down 
+08 Sep 2022 15:20:20,514 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+08 Sep 2022 15:21:05,192 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 15:21:07,761 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+08 Sep 2022 15:21:07,777 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 27, new version is 27, executing database incremental update scripts 
+08 Sep 2022 15:21:07,779 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+08 Sep 2022 15:21:07,781 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:67) Configuring EntityManager from hibernate.properties 
+08 Sep 2022 15:21:12,088 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+08 Sep 2022 15:21:12,227 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:115) Using RAM Lucene storage 
+08 Sep 2022 15:21:12,585 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+08 Sep 2022 15:21:12,618 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:55) Inbox service starting up 
+08 Sep 2022 15:25:55,459 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:60) Inbox service shutting down 
+08 Sep 2022 15:25:55,465 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 

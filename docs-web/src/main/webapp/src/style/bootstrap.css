@@ -1818,6 +1818,7 @@ input[type="search"] {
 }
 .radio,
 .checkbox {
+  padding: 18px 18px 18px; 
   position: relative;
   display: block;
   margin-top: 10px;
@@ -2689,6 +2690,8 @@ tbody.collapse.in {
 .dropup,
 .dropdown {
   position: relative;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .dropdown-toggle:focus {
   outline: 0;

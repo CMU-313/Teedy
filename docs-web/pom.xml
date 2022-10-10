@@ -14,6 +14,24 @@
   <packaging>war</packaging>
   <name>Docs Web</name>
 
+  <properties>
+      <!-- Build plugins -->
+
+        <java.version>1.8</java.version>
+      <mvn-compiler-plugin.version>3.7.0</mvn-compiler-plugin.version>
+      <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
+      <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
+      <replacer.version>1.5.3</replacer.version>
+      <!-- end Build plugins -->
+      <!-- Code -->
+      <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+      <javax.ws.rs-api.version>2.1</javax.ws.rs-api.version>
+      <jersey.version>2.27</jersey.version>
+      <swagger.version>2.0.2</swagger.version>
+      <swagger-ui.version>3.17.0</swagger-ui.version>
+      <!-- end Code -->
+  </properties>
+
   <dependencies>
     <!-- Dependencies to Docs -->
     <dependency>
@@ -78,7 +96,11 @@
       <artifactId>javax.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-  
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>${javax.ws.rs-api.version}</version>
+    </dependency>
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
@@ -139,6 +161,18 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- Swagger -->
+    <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-jaxrs2</artifactId>
+        <version>${swagger.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-jaxrs2-servlet-initializer</artifactId>
+        <version>${swagger.version}</version>
+    </dependency>
+    <!-- End Swagger -->
   </dependencies>
 
   <build>
@@ -180,6 +214,78 @@
         </resources>
 
         <plugins>
+        <plugin>
+                <!-- Build with specified Java version. -->
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mvn-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Download Swagger UI webjar. -->
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.webjars</groupId>
+                                    <artifactId>swagger-ui</artifactId>
+                                    <version>${swagger-ui.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- Add Swagger UI resources to the war file. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven-war-plugin.version}</version>
+                <configuration>
+                    <webResources combine.children="append">
+                        <resource>
+                            <directory>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui/${swagger-ui.version}</directory>
+                            <includes>
+                                <include>**/*.*</include>
+                            </includes>
+                            <targetPath>swagger-ui</targetPath>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Replace the OpenAPI specification example URL with the local one. -->
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>${replacer.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <file>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui/${swagger-ui.version}/index.html</file>
+                    <replacements>
+                        <replacement>
+                            <token>http://petstore.swagger.io/v2/swagger.json</token>
+                            <value>/api/openapi.json</value>
+                        </replacement>
+                    </replacements>
+                </configuration>
+            </plugin>
           <plugin>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-maven-plugin</artifactId>
